@@ -1,12 +1,12 @@
 # Privacy Policy for Notiva Music Player
 
-**Last Updated: December 25, 2025**
+**Last Updated: February 20, 2026**
 
 ---
 
 ## Introduction
 
-Welcome to Novitra, developed by **Novatra** ("we," "our," or "us"). We respect your privacy and are committed to protecting your personal data. This privacy policy explains how we handle information when you use our Notiva Music Player application ("App").
+Welcome to Notiva, developed by **Novatra** ("we," "our," or "us"). We respect your privacy and are committed to protecting your personal data. This privacy policy explains how we handle information when you use our Notiva Music Player application ("App").
 
 ---
 
@@ -22,11 +22,25 @@ We access the following data **locally on your device** to provide core function
 | Playlists | Manage your music collections | Your device only |
 | Favorites | Track your favorite songs | Your device only |
 | Lyrics files | Display song lyrics | Your device only |
-| App preferences | Remember your settings | Your device only |
+| App preferences | Remember your settings (theme, language, playback) | Your device only |
 
 **Important:** This data never leaves your device and is never transmitted to our servers.
 
-### 2. Network Requests
+### 2. Crash Reports & Analytics (Firebase)
+We use **Firebase Crashlytics** and **Firebase Analytics** (by Google) to improve the app's stability and performance:
+
+| Service | Data Collected | Purpose |
+|---------|---------------|---------|
+| Firebase Crashlytics | Crash logs, device model, OS version, app version | Identify and fix bugs |
+| Firebase Analytics | Anonymous usage patterns, screen views, feature usage | Improve user experience |
+
+**Important:**
+- This data is **anonymous** and cannot be used to identify you personally
+- No personal information, song titles, or music library contents are included
+- You can opt out of analytics by disabling "Share usage data" in your device settings
+- Firebase data is processed by Google under their [Privacy Policy](https://policies.google.com/privacy)
+
+### 3. Network Requests
 The App connects to the internet for the following purposes:
 
 | Feature | Service | Data Sent |
@@ -42,14 +56,13 @@ The App connects to the internet for the following purposes:
 
 We want to be clear about what we **do not** do:
 
-- ❌ We do **not** collect personal information
+- ❌ We do **not** collect personal information (name, email, phone number)
 - ❌ We do **not** track your location
 - ❌ We do **not** access your contacts
-- ❌ We do **not** use analytics or tracking services
 - ❌ We do **not** show advertisements
 - ❌ We do **not** sell or share any data with third parties
 - ❌ We do **not** create user accounts or profiles
-- ❌ We do **not** have access to your music library contents
+- ❌ We do **not** have access to your music library contents from our servers
 
 ---
 
@@ -59,8 +72,9 @@ We want to be clear about what we **do not** do:
 |------------|----------------|
 | `READ_MEDIA_AUDIO` | Access your music files to play them |
 | `READ_MEDIA_IMAGES` | Display album artwork |
+| `READ_EXTERNAL_STORAGE` | Access music files on Android 12 and below |
 | `MANAGE_EXTERNAL_STORAGE` | Edit song metadata (title, artist, album, cover art) and save embedded lyrics - required for modifying audio file tags |
-| `INTERNET` | Search for lyrics online |
+| `INTERNET` | Search for lyrics online, crash reporting |
 | `FOREGROUND_SERVICE` | Keep music playing in background |
 | `POST_NOTIFICATIONS` | Show playback controls in notification |
 | `WAKE_LOCK` | Prevent device from sleeping during playback |
@@ -71,8 +85,11 @@ We want to be clear about what we **do not** do:
 
 ## Third-Party Services
 
+### Firebase (Google)
+We use Firebase Crashlytics and Firebase Analytics to monitor app stability and improve the user experience. Firebase is operated by Google and is subject to [Google's Privacy Policy](https://policies.google.com/privacy). The data collected is anonymous and used solely for improving the App.
+
 ### Lyrics Search
-When you use the lyrics search feature, your request is processed through third-party lyrics providers. These providers have their own privacy policies:
+When you use the lyrics search feature, your request is processed through third-party lyrics providers:
 
 - The only data transmitted is the song title and artist name
 - No personal or device information is included
@@ -91,22 +108,23 @@ When using the WebView, standard web browsing data may be processed by the websi
 
 ## Data Storage and Security
 
-- **All app data is stored locally** on your device
+- **All user data is stored locally** on your device
+- Crash reports and anonymous analytics are processed by Firebase (Google)
 - We use Android's standard security features to protect stored data
 - We do not have servers that store your personal information
-- Uninstalling the app removes all associated data from your device
+- Uninstalling the app removes all locally stored data from your device
 
 ---
 
 ## Data Deletion
 
-Since all data is stored locally on your device, you have full control over your data:
+Since all user data is stored locally on your device, you have full control:
 
 - **Delete all app data:** Go to Android Settings → Apps → Notiva → Storage → Clear Data
 - **Delete cache only:** Go to Android Settings → Apps → Notiva → Storage → Clear Cache
-- **Complete removal:** Uninstall the App to remove all associated data
+- **Complete removal:** Uninstall the App to remove all locally stored data
 
-No data is stored on our servers, so there is nothing to request deletion of from our side.
+For Firebase data, anonymous crash/analytics data is automatically deleted after the retention period set by Google (typically 90 days for Crashlytics, 14 months for Analytics).
 
 ---
 
@@ -132,7 +150,7 @@ You have the right to:
 - ✅ Access all your data (it's already on your device!)
 - ✅ Delete your data (uninstall the app or clear app data)
 - ✅ Deny permissions (some features may not work)
-- ✅ Use the app offline (except lyrics search)
+- ✅ Use the app offline (except lyrics search and crash reporting)
 
 ---
 
@@ -141,19 +159,19 @@ You have the right to:
 If you have any questions about this Privacy Policy or our practices, please contact us:
 
 - **Developer:** Novatra
-- **Email:** [your-email@example.com]
-- **GitHub:** [your-github-repo-url]
+- **Email:** info@novatra-app.online
+- **Website:** [novatra-app.online](https://novatra-app.online)
 
 ---
 
 ## Summary
 
-**In simple terms:** Notiva is an offline music player. Your music stays on your device. We only connect to the internet when you search for lyrics. We don't collect, store, or share your personal information.
+**In simple terms:** Notiva is primarily an offline music player. Your music and personal data stay on your device. We use Firebase to collect anonymous crash reports and usage data to improve the app. We only connect to the internet for lyrics search and crash reporting. We don't collect, store, or share your personal information.
 
 ---
 
-*This privacy policy is effective as of December 25, 2025*
+*This privacy policy is effective as of February 20, 2026*
 
 ---
 
-© 2025 Novatra. All rights reserved.
+© 2026 Novatra. All rights reserved.
